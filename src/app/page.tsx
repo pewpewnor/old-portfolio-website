@@ -150,12 +150,12 @@ interface HomePageProps {}
 const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 	return (
 		<div className="flex h-max w-full flex-col bg-gradient-to-b from-slate-800 via-black to-gray-800">
-			<div className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-14 px-8 md:flex-row">
-				<div className="flex h-full flex-col justify-center">
-					<h2 className="text-4xl font-bold text-white sm:text-7xl">
-						I&apos;m a student and enthusiast programmer
+			<div className="flex h-full min-h-screen flex-col items-center justify-center gap-14 px-8 md:flex-row">
+				<div className="flex h-full flex-col items-end">
+					<h2 className="text-4xl font-bold text-white sm:text-7xl md:text-right">
+						I&apos;m a student programmer
 					</h2>
-					<p className="max-w-xl py-4 text-lg text-gray-500">
+					<p className="max-w-2xl py-4 text-lg text-gray-500 md:text-right">
 						Hello, my name is Norbert Oliver. I am a student at
 						Binus University (computer science major). I love
 						programming because it gives me a good feeling everytime
@@ -165,7 +165,7 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 						solutions.
 					</p>
 
-					<div>
+					<div className="self-center">
 						<Link
 							href="/projects"
 							className="group my-2 flex w-fit cursor-pointer items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-xl text-white hover:font-bold"
