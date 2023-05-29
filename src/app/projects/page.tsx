@@ -3,6 +3,7 @@ import SwitchChannelContext from "@/contexts/SwitchChannelContext";
 import ScriptQuestIntro from "@/page/scriptquest/ScriptQuestIntro";
 import ChannelSection from "@/page/workspace/ChannelSection";
 import { ChannelData } from "@/types/props";
+import { channel } from "diagnostics_channel";
 import { FC, useState } from "react";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { twMerge } from "tailwind-merge";
@@ -10,6 +11,7 @@ import { twMerge } from "tailwind-merge";
 const workspaceData = {
 	channelSections: [
 		{
+			id: "SQ",
 			name: "SCRIPT QUEST",
 			channels: [
 				{
@@ -46,6 +48,20 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 		}
 	}
 
+	function setCurrentChannelById(
+		channelSectionId: string,
+		channelId: string
+	) {
+		setCurrentChannel(
+			// @ts-expect-error
+			workspaceData.channelSections
+				.find(
+					(channelSection) => channelSection.id === channelSectionId
+				)
+				?.channels.find((channel) => channel.id === channelId)
+		);
+	}
+
 	return (
 		<div
 			className={twMerge(
@@ -54,7 +70,11 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 			)}
 		>
 			<SwitchChannelContext.Provider
-				value={[currentChannel, setCurrentChannel]}
+				value={[
+					currentChannel,
+					setCurrentChannel,
+					setCurrentChannelById,
+				]}
 			>
 				{/* Channel Sidebar */}
 				<div

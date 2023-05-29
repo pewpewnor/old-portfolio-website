@@ -8,10 +8,8 @@ import { twMerge } from "tailwind-merge";
 interface ChannelProps extends ChannelData {}
 
 const Channel: FC<ChannelProps> = (props: ChannelProps) => {
-	const [currentChannel, setCurrentChannel] =
+	const [currentChannel, setCurrentChannel, _] =
 		useContext(SwitchChannelContext);
-
-	console.log(currentChannel && currentChannel.id === props.id);
 
 	return (
 		<div
