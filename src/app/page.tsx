@@ -153,13 +153,16 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 			<div className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-14 px-8 md:flex-row">
 				<div className="flex h-full flex-col justify-center">
 					<h2 className="text-4xl font-bold text-white sm:text-7xl">
-						I&apos;m a Full Stack Developer
+						I&apos;m a student and enthusiast programmer
 					</h2>
 					<p className="max-w-xl py-4 text-lg text-gray-500">
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Minus possimus aliquam, veritatis blanditiis
-						explicabo alias dolores aut labore voluptatum est ea
-						laborum accusamus saepe tempore amet sequi iusto porro
+						Hello, my name is Norbert Oliver. I am a student at
+						Binus University (computer science major). I love
+						programming because it gives me a good feeling everytime
+						I contributed to an open source project, or make them
+						myself to help others in the world. It is also a place
+						for converting my creativity into building innovative
+						solutions.
 					</p>
 
 					<div>
