@@ -2,17 +2,25 @@
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
 import { ChannelData } from "@/types/props";
 import { FC, useContext } from "react";
-import { CiSettings } from "react-icons/ci";
 import { HiHashtag } from "react-icons/hi";
+import { twMerge } from "tailwind-merge";
 
 interface ChannelProps extends ChannelData {}
 
 const Channel: FC<ChannelProps> = (props: ChannelProps) => {
-	const [_, setCurrentChannel] = useContext(SwitchChannelContext);
+	const [currentChannel, setCurrentChannel] =
+		useContext(SwitchChannelContext);
+
+	console.log(currentChannel && currentChannel.id === props.id);
 
 	return (
 		<div
-			className="mx-2 mb-1 flex justify-between rounded-md py-1 pl-6 pr-2 hover:bg-light-shade-blue"
+			className={twMerge(
+				"mx-2 mb-1 flex justify-between rounded-md py-1 pl-6 pr-2",
+				currentChannel && currentChannel.id === props.id
+					? "bg-slate-500"
+					: "hover:bg-light-shade-blue"
+			)}
 			onClick={() => {
 				setCurrentChannel(props);
 			}}
