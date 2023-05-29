@@ -21,13 +21,10 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 			<div className="flex h-12 items-center justify-between px-8">
 				{/* Logo container */}
 				<div className="logo flex items-center justify-between gap-x-3">
-					<Image
-						src="/batchbook-logo.svg"
-						width="32"
-						height="32"
-						alt="logo"
-					/>
-					<h1 className="select-none text-xl font-bold">BatchBook</h1>
+					<Image src="/ocean.jpg" width="64" height="64" alt="logo" />
+					<h1 className="select-none text-xl font-bold">
+						Norbert Oliver
+					</h1>
 				</div>
 
 				{/* Navigation links */}
