@@ -1,6 +1,6 @@
 "use client";
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
-import { ChannelData } from "@/types/workspace-type";
+import { ChannelData } from "@/types/props";
 import { FC, useContext } from "react";
 import { CiSettings } from "react-icons/ci";
 import { HiHashtag } from "react-icons/hi";
