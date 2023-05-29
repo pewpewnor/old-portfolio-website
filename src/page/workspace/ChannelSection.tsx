@@ -22,7 +22,7 @@ const ChannelSection: FC<ChannelSectionProps> = (
 	return (
 		<>
 			<div
-				className="group my-2 flex select-none justify-between bg-light-shade-blue py-2 pl-2 pr-4 hover:bg-slate-600"
+				className="group my-2 flex select-none justify-between py-2 pl-2 pr-4 hover:bg-light-shade-blue"
 				onClick={toggleChannelSectionDropdown}
 			>
 				{/* Left section */}
