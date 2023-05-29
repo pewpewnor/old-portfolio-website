@@ -59,7 +59,7 @@ const ScriptQuestIntro: FC<ScriptQuestIntroProps> = (
 					setCurrentChannelById("SQ", "SQ02");
 				}}
 			>
-				Why ScriptQuest Was Made
+				Why ScriptQuest?
 			</button>
 		</div>
 	);
