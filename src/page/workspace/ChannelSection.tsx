@@ -1,10 +1,13 @@
 "use client";
 import Channel from "@/page/workspace/Channel";
-import { ChannelSectionData } from "@/types/workspace-type";
+import { ChannelData } from "@/types/props";
 import { FC, useState } from "react";
 import { BsCaretDown, BsCaretDownFill, BsPlusLg } from "react-icons/bs";
 
-interface ChannelSectionProps extends ChannelSectionData {}
+interface ChannelSectionProps {
+	name: string;
+	channels: ChannelData[];
+}
 
 const ChannelSection: FC<ChannelSectionProps> = (
 	props: ChannelSectionProps
@@ -43,8 +46,8 @@ const ChannelSection: FC<ChannelSectionProps> = (
 			{/* Dropdown channels that belongs to this channel section */}
 			{channelSectionDropdown && (
 				<div className="flex flex-col">
-					{props.channels.map((channel) => (
-						<Channel key={channel.id} {...channel} />
+					{props.channels.map((channel, index) => (
+						<Channel key={index} {...channel} />
 					))}
 				</div>
 			)}
