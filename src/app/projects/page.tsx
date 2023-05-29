@@ -12,10 +12,12 @@ const workspaceData = {
 			name: "SCRIPT QUEST",
 			channels: [
 				{
+					id: "SQ01",
 					name: "Introduction",
 					content: <ScriptQuestIntro />,
 				},
 				{
+					id: "SQ02",
 					name: "How to use",
 					content: <div>How to uuse</div>,
 				},
@@ -47,7 +49,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 		<div className="relative flex h-full">
 			{/* Channel Sidebar */}
 			<div
-				className={`relative h-full border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
+				className={`relative h-full min-h-screen border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
 					isChannelSidebarOpen ? "w-64" : "w-0"
 				}`}
 			>
