@@ -101,7 +101,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 						</p>
 					</div>
 				) : currentChannel.content ? (
-					currentChannel.content
+					<div className="p-4">{currentChannel.content}</div>
 				) : (
 					<div className="flex h-full items-center justify-center">
 						<p className="text-lg">
