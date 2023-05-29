@@ -16,7 +16,7 @@ const RootLayout: FC<RootLayoutProps> = (props: RootLayoutProps) => {
 	return (
 		<html lang="en">
 			<body>
-				<div className="h-screen bg-gradient-to-b from-shade-blue to-navy-blue pt-12">
+				<div className="h-screen bg-navy-blue pt-12">
 					<Navbar />
 					{props.children}
 				</div>
