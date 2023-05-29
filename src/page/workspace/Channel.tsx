@@ -24,9 +24,7 @@ const Channel: FC<ChannelProps> = (props: ChannelProps) => {
 			</div>
 
 			{/* Right section */}
-			<div className="flex items-center gap-x-2">
-				<CiSettings />
-			</div>
+			<div className="flex items-center gap-x-2"></div>
 		</div>
 	);
 };
