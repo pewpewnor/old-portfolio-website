@@ -65,7 +65,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 	return (
 		<div
 			className={twMerge(
-				"relative flex h-max min-h-screen bg-gradient-to-b from-shade-blue to-navy-blue",
+				"relative flex h-max min-h-screen bg-navy-blue",
 				isChannelSidebarOpen ? "pl-64" : ""
 			)}
 		>

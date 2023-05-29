@@ -149,7 +149,7 @@ interface HomePageProps {}
 
 const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 	return (
-		<div className="flex h-max w-full flex-col bg-gradient-to-b from-slate-800 via-black to-gray-800">
+		<div className="flex h-max w-full flex-col bg-slate-900">
 			<div className="flex h-full min-h-screen flex-col items-center justify-center gap-14 px-8 lg:flex-row">
 				<div className="flex h-full flex-col items-center justify-center lg:items-end">
 					<h2 className="text-center text-4xl font-bold text-white sm:text-7xl lg:text-right">
@@ -168,7 +168,7 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 					<div className="self-center lg:self-end">
 						<Link
 							href="/projects"
-							className="group my-2 flex w-fit cursor-pointer items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 px-6 py-3 text-xl text-white hover:font-bold"
+							className="group my-2 flex w-fit cursor-pointer items-center rounded-md bg-blue-500 px-6 py-3 text-xl text-white hover:font-bold"
 						>
 							My Projects
 							<span className="duration-300 group-hover:rotate-90">
