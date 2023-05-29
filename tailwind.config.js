@@ -8,6 +8,9 @@ module.exports = {
 				"shade-blue": "#152239",
 				"light-shade-blue": "#303C5A",
 			},
+			fontFamily: {
+				neue: "Helvetica Neue",
+			},
 		},
 	},
 	plugins: [],
