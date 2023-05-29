@@ -8,10 +8,10 @@ import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 const workspaceData = {
 	channelSections: [
 		{
-			name: "ScriptQuest",
+			name: "SCRIPT QUEST",
 			channels: [
 				{
-					name: "introduction",
+					name: "Introduction",
 					content: (
 						<div>
 							Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -21,7 +21,7 @@ const workspaceData = {
 					),
 				},
 				{
-					name: "how to use",
+					name: "How to use",
 					content: <div>How to uuse</div>,
 				},
 			],
@@ -53,7 +53,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 			{/* Channel Sidebar */}
 			<div
 				className={`relative h-full border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
-					isChannelSidebarOpen ? "w-56" : "w-0"
+					isChannelSidebarOpen ? "w-64" : "w-0"
 				}`}
 			>
 				<div className={isChannelSidebarOpen ? "block" : "hidden"}>
