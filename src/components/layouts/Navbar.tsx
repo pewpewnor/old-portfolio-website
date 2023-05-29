@@ -21,7 +21,13 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 			<div className="flex h-12 items-center justify-between px-8">
 				{/* Logo container */}
 				<div className="logo flex items-center justify-between gap-x-3">
-					<Image src="/ocean.jpg" width="64" height="64" alt="logo" />
+					<Image
+						src="/profile-pic.png"
+						width="32"
+						height="32"
+						alt="logo"
+						className="rounded-full"
+					/>
 					<h1 className="select-none text-xl font-bold">
 						Norbert Oliver
 					</h1>
@@ -32,13 +38,13 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 					<div className="links flex items-center justify-between gap-x-12 lg:gap-x-14">
 						<Link
 							href="/"
-							className="font-bold hover:text-slate-400"
+							className="select-none font-bold hover:text-slate-400"
 						>
 							Home
 						</Link>
 						<Link
 							href="/projects"
-							className="font-bold hover:text-slate-400"
+							className="select-none font-bold hover:text-slate-400"
 						>
 							Projects
 						</Link>
@@ -58,16 +64,16 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 
 			{/* Dropdown navbar menu for mobile responsive view */}
 			{showNavbarDropdown && (
-				<div className="absolute right-4 z-10 mt-2 w-48 rounded-md bg-shade-blue bg-opacity-75 py-2 shadow-lg backdrop-blur-lg">
+				<div className="absolute right-4 z-10 mt-2 w-48 rounded-md bg-black bg-opacity-75 py-2 shadow-lg backdrop-blur-lg">
 					<Link
 						href="/"
-						className="block border-b-2 border-black px-4 py-4 text-sm text-slate-100 active:bg-light-shade-blue"
+						className="block border-b-2 border-white px-4 py-4 text-sm text-slate-100 active:bg-light-shade-blue"
 					>
 						Home
 					</Link>
 					<Link
 						href="/projects"
-						className="block border-b-2 border-black px-4 py-4 text-sm text-slate-100 active:bg-light-shade-blue"
+						className="block border-white px-4 py-4 text-sm text-slate-100 active:bg-light-shade-blue"
 					>
 						Projects
 					</Link>
