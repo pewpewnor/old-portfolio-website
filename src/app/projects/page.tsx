@@ -53,16 +53,16 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 				isChannelSidebarOpen ? "pl-64" : ""
 			)}
 		>
-			{/* Channel Sidebar */}
-			<div
-				className={`absolute left-0 top-0 h-full min-h-screen border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
-					isChannelSidebarOpen ? "w-64" : "w-0"
-				}`}
+			<SwitchChannelContext.Provider
+				value={[currentChannel, setCurrentChannel]}
 			>
-				<div className={isChannelSidebarOpen ? "block" : "hidden"}>
-					<SwitchChannelContext.Provider
-						value={[currentChannel, setCurrentChannel]}
-					>
+				{/* Channel Sidebar */}
+				<div
+					className={`absolute left-0 top-0 h-full min-h-screen border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
+						isChannelSidebarOpen ? "w-64" : "w-0"
+					}`}
+				>
+					<div className={isChannelSidebarOpen ? "block" : "hidden"}>
 						{workspaceData.channelSections.map(
 							(channelSection, index) => {
 								return (
@@ -73,46 +73,46 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 								);
 							}
 						)}
-					</SwitchChannelContext.Provider>
+					</div>
+
+					{isChannelSidebarOpen ? (
+						<div
+							className="absolute right-[-1.25rem] block rounded-2xl bg-black p-2"
+							style={{ top: "calc(50% - 2rem)" }}
+							onClick={toggleChannelSidebarCollapse}
+						>
+							<AiOutlineDoubleLeft />
+						</div>
+					) : (
+						<div
+							className="absolute left-2 block rounded-2xl bg-black p-2"
+							style={{ top: "calc(50% - 2rem)" }}
+							onClick={toggleChannelSidebarCollapse}
+						>
+							<AiOutlineDoubleRight />
+						</div>
+					)}
 				</div>
 
-				{isChannelSidebarOpen ? (
-					<div
-						className="absolute right-[-1.25rem] block rounded-2xl bg-black p-2"
-						style={{ top: "calc(50% - 2rem)" }}
-						onClick={toggleChannelSidebarCollapse}
-					>
-						<AiOutlineDoubleLeft />
-					</div>
-				) : (
-					<div
-						className="absolute left-2 block rounded-2xl bg-black p-2"
-						style={{ top: "calc(50% - 2rem)" }}
-						onClick={toggleChannelSidebarCollapse}
-					>
-						<AiOutlineDoubleRight />
-					</div>
-				)}
-			</div>
-
-			{/* Main content */}
-			<div className="h-full w-full">
-				{!currentChannel ? (
-					<div className="flex h-full items-center justify-center">
-						<p className="text-lg">
-							Let&apos;s pick a channel to open!
-						</p>
-					</div>
-				) : currentChannel.content ? (
-					<div className="p-8">{currentChannel.content}</div>
-				) : (
-					<div className="flex h-full items-center justify-center">
-						<p className="text-lg">
-							This channel seems to not work properly
-						</p>
-					</div>
-				)}
-			</div>
+				{/* Main content */}
+				<div className="h-full w-full">
+					{!currentChannel ? (
+						<div className="flex h-full items-center justify-center">
+							<p className="text-lg">
+								Let&apos;s pick a channel to open!
+							</p>
+						</div>
+					) : currentChannel.content ? (
+						<div className="p-8">{currentChannel.content}</div>
+					) : (
+						<div className="flex h-full items-center justify-center">
+							<p className="text-lg">
+								This channel seems to not work properly
+							</p>
+						</div>
+					)}
+				</div>
+			</SwitchChannelContext.Provider>
 		</div>
 	);
 };
