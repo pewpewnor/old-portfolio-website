@@ -69,10 +69,10 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 						Home
 					</Link>
 					<Link
-						href="/workspaces"
+						href="/projects"
 						className="block border-b-2 border-black px-4 py-4 text-sm text-slate-100 active:bg-light-shade-blue"
 					>
-						Workspaces
+						Projects
 					</Link>
 				</div>
 			)}
