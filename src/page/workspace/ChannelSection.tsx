@@ -38,9 +38,7 @@ const ChannelSection: FC<ChannelSectionProps> = (
 				</div>
 
 				{/* Right section */}
-				<div className="flex items-center gap-x-2">
-					<BsPlusLg />
-				</div>
+				<div className="flex items-center gap-x-2"></div>
 			</div>
 
 			{/* Dropdown channels that belongs to this channel section */}
