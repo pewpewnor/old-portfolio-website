@@ -49,7 +49,7 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 							href="/projects"
 							className="select-none font-bold hover:text-slate-400"
 						>
-							Projects
+							My Projects
 						</Link>
 					</div>
 				</div>
