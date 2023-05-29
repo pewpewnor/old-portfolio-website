@@ -40,10 +40,10 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 							Home
 						</Link>
 						<Link
-							href="/workspaces"
+							href="/projects"
 							className="font-bold hover:text-slate-400"
 						>
-							Workspaces
+							Projects
 						</Link>
 					</div>
 				</div>
