@@ -1,9 +1,9 @@
 "use client";
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
 import ScriptQuestIntro from "@/page/scriptquest/ScriptQuestIntro";
+import ScriptQuestWhy from "@/page/scriptquest/ScriptQuestWhy";
 import ChannelSection from "@/page/workspace/ChannelSection";
 import { ChannelData } from "@/types/props";
-import { channel } from "diagnostics_channel";
 import { FC, useState } from "react";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
 import { twMerge } from "tailwind-merge";
@@ -21,8 +21,8 @@ const workspaceData = {
 				},
 				{
 					id: "SQ02",
-					name: "How to use",
-					content: <div>How to uuse</div>,
+					name: "Why ScriptQuest?",
+					content: <ScriptQuestWhy />,
 				},
 			],
 		},
@@ -65,7 +65,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 	return (
 		<div
 			className={twMerge(
-				"relative flex h-max bg-gradient-to-b from-shade-blue to-navy-blue",
+				"relative flex h-max min-h-screen bg-gradient-to-b from-shade-blue to-navy-blue",
 				isChannelSidebarOpen ? "pl-64" : ""
 			)}
 		>
