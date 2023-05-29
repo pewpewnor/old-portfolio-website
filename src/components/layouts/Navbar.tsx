@@ -29,7 +29,10 @@ const Navbar: FC<NavbarProps> = (props: NavbarProps) => {
 						className="rounded-full"
 					/>
 					<h1 className="select-none text-xl font-bold">
-						Norbert Oliver
+						Norbert O
+						<p className="hidden select-none text-xl font-bold sm:inline">
+							liver
+						</p>
 					</h1>
 				</div>
 
