@@ -1,5 +1,6 @@
 "use client";
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
+import ScriptQuest from "@/page/scriptquest/ScriptQuest";
 import ChannelSection from "@/page/workspace/ChannelSection";
 import { ChannelData } from "@/types/props";
 import { FC, useState } from "react";
@@ -12,13 +13,7 @@ const workspaceData = {
 			channels: [
 				{
 					name: "Introduction",
-					content: (
-						<div>
-							Lorem ipsum, dolor sit amet consectetur adipisicing
-							elit. Architecto voluptas eos asperiores at earum
-							cum, quos ut sint repellat libero!
-						</div>
-					),
+					content: <ScriptQuest />,
 				},
 				{
 					name: "How to use",
@@ -101,7 +96,7 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 						</p>
 					</div>
 				) : currentChannel.content ? (
-					<div className="p-4">{currentChannel.content}</div>
+					<div className="p-8">{currentChannel.content}</div>
 				) : (
 					<div className="flex h-full items-center justify-center">
 						<p className="text-lg">
