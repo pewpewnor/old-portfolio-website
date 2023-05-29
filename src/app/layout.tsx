@@ -1,4 +1,4 @@
-import ContextProvider from "@/components/index/ContextProvider";
+import Navbar from "@/components/layouts/Navbar";
 import { FC, ReactNode } from "react";
 import "server-only";
 import "./globals.css";
@@ -17,7 +17,10 @@ const RootLayout: FC<RootLayoutProps> = (props: RootLayoutProps) => {
 	return (
 		<html lang="en">
 			<body>
-				<ContextProvider>{props.children}</ContextProvider>
+				<div className="h-screen bg-gradient-to-b from-shade-blue to-navy-blue pt-12">
+					<Navbar />
+					{props.children}
+				</div>
 			</body>
 		</html>
 	);
