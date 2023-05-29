@@ -4,9 +4,8 @@ import "server-only";
 import "./globals.css";
 
 export const metadata = {
-	title: "BatchBook",
-	description:
-		"Open-source collaboration tool for agile developer teams to work together efficiently with features like kanban board and chat discussion room",
+	title: "Norbert O Portoliio",
+	description: "My Own Portoliio Website",
 };
 
 interface RootLayoutProps {
