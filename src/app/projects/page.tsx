@@ -1,6 +1,6 @@
 "use client";
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
-import ScriptQuest from "@/page/scriptquest/ScriptQuest";
+import ScriptQuestIntro from "@/page/scriptquest/ScriptQuestIntro";
 import ChannelSection from "@/page/workspace/ChannelSection";
 import { ChannelData } from "@/types/props";
 import { FC, useState } from "react";
@@ -13,7 +13,7 @@ const workspaceData = {
 			channels: [
 				{
 					name: "Introduction",
-					content: <ScriptQuest />,
+					content: <ScriptQuestIntro />,
 				},
 				{
 					name: "How to use",
