@@ -5,6 +5,7 @@ import ChannelSection from "@/page/workspace/ChannelSection";
 import { ChannelData } from "@/types/props";
 import { FC, useState } from "react";
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from "react-icons/ai";
+import { twMerge } from "tailwind-merge";
 
 const workspaceData = {
 	channelSections: [
@@ -46,10 +47,15 @@ const Workspace: FC<WorkspaceProps> = (props: WorkspaceProps) => {
 	}
 
 	return (
-		<div className="relative flex h-full">
+		<div
+			className={twMerge(
+				"relative flex h-max bg-gradient-to-b from-shade-blue to-navy-blue",
+				isChannelSidebarOpen ? "pl-64" : ""
+			)}
+		>
 			{/* Channel Sidebar */}
 			<div
-				className={`relative h-full min-h-screen border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
+				className={`absolute left-0 top-0 h-full min-h-screen border-0 bg-shade-blue bg-opacity-75 pt-1 shadow-lg ${
 					isChannelSidebarOpen ? "w-64" : "w-0"
 				}`}
 			>
