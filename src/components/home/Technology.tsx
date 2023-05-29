@@ -14,14 +14,14 @@ const Technology: FC<TechnologyProps> = (props: TechnologyProps) => {
 		<Link href={props.link}>
 			<div
 				key={props.title}
-				className={`${props.shadow} flex flex-col items-center justify-center rounded-lg bg-slate-800 py-2 shadow-md duration-500 hover:scale-105`}
+				className={`${props.shadow} flex h-full flex-col items-center justify-center rounded-lg bg-slate-800 p-4 shadow-md duration-500 hover:scale-105`}
 			>
 				<Image
 					src={props.src}
 					alt="logo"
 					width={80}
 					height={80}
-					className="h-20 w-max"
+					className="block h-20 w-max sm:block"
 				/>
 				<p className="mt-4 font-bold">{props.title}</p>
 			</div>
