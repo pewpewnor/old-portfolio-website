@@ -4,8 +4,8 @@ import "server-only";
 import "./globals.css";
 
 export const metadata = {
-	title: "Norbert O Portoliio",
-	description: "My Own Portoliio Website",
+	title: "Norbert O Portfolio",
+	description: "My Own Portfolio Website",
 };
 
 interface RootLayoutProps {
