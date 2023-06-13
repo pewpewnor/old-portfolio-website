@@ -4,51 +4,6 @@ import Link from "next/link";
 import { FC } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
-const others = [
-	{
-		src: "/github.png",
-		title: "GITHUB",
-		shadow: "shadow-gray-400",
-		link: "https://www.github.com/pewpewnor",
-	},
-	{
-		src: "/git.png",
-		title: "GIT",
-		shadow: "shadow-orange-400",
-		link: "https://www.github.com/pewpewnor",
-	},
-	{
-		src: "/python.png",
-		title: "PYTHON",
-		shadow: "shadow-blue-500",
-		link: "htttp://python.org",
-	},
-	{
-		src: "/java.png",
-		title: "JAVA",
-		shadow: "shadow-red-400",
-		link: "",
-	},
-	{
-		src: "/golang.png",
-		title: "JAVA",
-		shadow: "shadow-blue-400",
-		link: "",
-	},
-	{
-		src: "/csharp.png",
-		title: "C#",
-		shadow: "shadow-purple-500",
-		link: "",
-	},
-	{
-		src: "/c.png",
-		title: "C",
-		shadow: "shadow-blue-500",
-		link: "",
-	},
-];
-
 const frontends = [
 	{
 		src: "/react.png",
@@ -145,6 +100,57 @@ const backends = [
 	},
 ];
 
+const others = [
+	{
+		src: "/github.png",
+		title: "GITHUB",
+		shadow: "shadow-gray-400",
+		link: "https://www.github.com/pewpewnor",
+	},
+	{
+		src: "/git.png",
+		title: "GIT",
+		shadow: "shadow-orange-400",
+		link: "https://www.github.com/pewpewnor",
+	},
+	{
+		src: "/python.png",
+		title: "PYTHON",
+		shadow: "shadow-blue-500",
+		link: "htttp://python.org",
+	},
+	{
+		src: "/java.png",
+		title: "JAVA",
+		shadow: "shadow-red-400",
+		link: "",
+	},
+	{
+		src: "/golang.png",
+		title: "GO",
+		shadow: "shadow-blue-400",
+		link: "",
+	},
+	{
+		src: "/csharp.png",
+		title: "C#",
+		shadow: "shadow-purple-500",
+		link: "",
+	},
+	{
+		src: "/c.png",
+		title: "C",
+		shadow: "shadow-blue-500",
+		link: "",
+	},
+	{
+		src: "/asp.png",
+		title: "ASP.NET",
+		shadow: "shadow-blue-500",
+		link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+	},
+];
+
 interface HomePageProps {}
 
 const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
@@ -157,11 +163,11 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 					</h2>
 					<p className="max-w-2xl py-4 text-center text-lg text-gray-500 lg:text-right">
 						Hello, my name is Norbert Oliver. I am a student at
-						Binus University (computer science major). I love
-						programming because it gives me a good feeling everytime
-						I contributed to an open source project, or make them
-						myself to help others in the world. It is also a place
-						for converting my creativity into building innovative
+						Binus University, majoring in computer science. I love
+						programming because it gives me a great feeling every
+						time I contribute to an open-source project or create my
+						own to help others in the world. It is also a way for me
+						to channel my creativity into building innovative
 						solutions.
 					</p>
 
