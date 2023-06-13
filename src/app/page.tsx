@@ -196,7 +196,7 @@ const HomePage: FC<HomePageProps> = (props: HomePageProps) => {
 				/>
 			</div>
 
-			<div className="flex h-full w-full flex-col items-center justify-center gap-32 p-4 text-white">
+			<div className="flex h-full w-full flex-col items-center justify-center gap-20 p-4 text-white md:gap-32">
 				<TechStackSection
 					title="My Frontend Tech Stack"
 					description="These are the frameworks, programming languages, and
