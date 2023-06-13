@@ -7,7 +7,7 @@ const ScriptQuestWhy: FC<ScriptQuestWhyProps> = (
 	props: ScriptQuestWhyProps
 ) => {
 	return (
-		<div className="flex h-full flex-col gap-14 font-neue text-lg">
+		<div className="flex h-full flex-col gap-14 text-lg">
 			<h1 className="text-center text-4xl font-semibold">
 				Why Script Quest?
 			</h1>
