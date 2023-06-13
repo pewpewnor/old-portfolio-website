@@ -11,7 +11,7 @@ const ScriptQuestIntro: FC<ScriptQuestIntroProps> = (
 	const [_, _2, setCurrentChannelById] = useContext(SwitchChannelContext);
 
 	return (
-		<div className="flex h-full flex-col gap-14 font-neue text-lg">
+		<div className="flex h-full flex-col gap-14 text-lg">
 			<h1 className="text-center text-4xl font-semibold">Script Quest</h1>
 			<hr />
 			<div className="mb-4 flex flex-col gap-8">
