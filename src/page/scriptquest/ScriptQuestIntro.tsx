@@ -12,23 +12,36 @@ const ScriptQuestIntro: FC<ScriptQuestIntroProps> = (
 
 	return (
 		<div className="flex h-full flex-col gap-14 text-lg">
-			<h1 className="text-center text-4xl font-semibold">Script Quest</h1>
+			<h1 className="text-center text-4xl font-semibold">ScriptQuest</h1>
 			<hr />
 			<div className="mb-4 flex flex-col gap-8">
-				<h2 className="text-2xl font-bold">Website Link</h2>
-				<div className="flex gap-2">
-					<p className="">You can visit the live website here:</p>
-					<Link
-						href="https://script-quest.vercel.app/"
-						className="text-orange-600 underline"
-					>
-						https://script-quest.vercel.app/
-					</Link>
+				<h2 className="text-2xl font-bold">Website Links</h2>
+				<div className="flex flex-col gap-4">
+					<div className="flex flex-col gap-2 lg:flex-row">
+						<p className="">You can visit the live website here:</p>
+						<Link
+							href="https://script-quest.vercel.app/"
+							className="text-orange-600 underline"
+						>
+							https://script-quest.vercel.app/
+						</Link>
+					</div>
+					<div className="flex gap-2">
+						<p className="">
+							You can visit the github repository here:
+						</p>
+						<Link
+							href="https://script-quest.vercel.app/"
+							className="text-orange-600 underline"
+						>
+							https://github.com/pewpewnor/ScriptQuest
+						</Link>
+					</div>
 				</div>
 			</div>
 			<div className="flex flex-col gap-8">
 				<h2 className="text-2xl font-bold">What is ScriptQuest?</h2>
-				<div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+				<div className="flex flex-col items-center justify-center gap-4 lg:flex-row">
 					<iframe
 						width="660"
 						height="355"
@@ -38,7 +51,7 @@ const ScriptQuestIntro: FC<ScriptQuestIntroProps> = (
 						allowFullScreen
 						className="w-full rounded-xl md:w-full"
 					></iframe>
-					<div className="flex w-full flex-col gap-4 md:w-1/2">
+					<div className="flex w-full flex-col gap-4 lg:w-1/2">
 						<p className="">
 							ScriptQuest is a website that anyone (regardless of
 							their programming background) can use to easily make

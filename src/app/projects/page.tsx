@@ -1,5 +1,6 @@
 "use client";
 import SwitchChannelContext from "@/contexts/SwitchChannelContext";
+import HyperSpaceIntro from "@/page/hyperspace/HyperSpaceIntro";
 import ScriptQuestIntro from "@/page/scriptquest/ScriptQuestIntro";
 import ScriptQuestWhy from "@/page/scriptquest/ScriptQuestWhy";
 import ChannelSection from "@/page/workspace/ChannelSection";
@@ -22,6 +23,22 @@ const workspaceData = {
 				{
 					id: "SQ02",
 					name: "Why ScriptQuest?",
+					content: <ScriptQuestWhy />,
+				},
+			],
+		},
+		{
+			id: "HY",
+			name: "HYPER SPACE",
+			channels: [
+				{
+					id: "HY01",
+					name: "Introduction",
+					content: <HyperSpaceIntro />,
+				},
+				{
+					id: "HY02",
+					name: "Why HyperSpace?",
 					content: <ScriptQuestWhy />,
 				},
 			],
